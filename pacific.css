@@ -1,3 +1,15 @@
+header,
+main,
+nav,
+footer,
+figure,
+figcaption,
+aside,
+section,
+article {
+    display: block;
+}
+
 body {
     background-color: #4F6D93;
     background-image: linear-gradient(to bottom, #FFFFFF, #4F6D93);
@@ -12,12 +24,14 @@ header {
     background-position: right;
     background-repeat: no-repeat;
     color: #FFFFFF;
+    display: block;
     height: 60px;
     padding-top: 10px;
     text-align: center;
 }
 
 nav {
+    display: block;
     float: left;
     font-weight: bold;
     padding: 20px;
@@ -29,8 +43,8 @@ nav a {
 }
 
 nav ul {
-    list-style-type: none;
     font-size: 1.2em;
+    list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
@@ -118,12 +132,127 @@ h3 {
     margin-left: 190px;
 }
 
+#mobile {
+    display: none;
+}
+
+#desktop {
+    display: inline;
+}
+
 footer {
     background-color: white;
+    display: block;
     font-family: georgia, "times new roman", serif;
     font-size: 75%;
     font-style: italic;
     margin-left: 190px;
     padding: 20px;
     text-align: center;
+}
+
+@media only screen and (max-width:64em) {
+    body {
+        background-color: #ffffff;
+        margin: 0;
+    }
+    #wrapper {
+        box-shadow: none;
+        min-width: 0;
+        width: auto;
+    }
+    main {
+        margin-left: 0;
+    }
+    nav {
+        float: none;
+        padding: 0.5em;
+        text-align: center;
+        width: auto;
+    }
+    nav ul li {
+        display: inline;
+        padding: 0.25em 0.75em 0.25em 0.75em;
+    }
+    .homehero {
+        height: 200px;
+        margin-left: 0;
+    }
+    .yurthero {
+        height: 200px;
+        margin-left: 0;
+    }
+    .trailhero {
+        height: 200px;
+        margin-left: 0;
+    }
+    footer {
+        margin-left: 0;
+    }
+}
+
+table {
+    border: 1px solid #3399cc;
+    border-spacing: 0;
+    width: 80%;
+}
+
+td,
+th {
+    border: 1px solid #3399cc;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+}
+
+.text {
+    text-align: left;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #f5fafc;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #header {
+        padding-top: 1em;
+    }
+    main {
+        font-size: 90%;
+        padding: 0.1em 1em 0.1em 1em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    nav {
+        padding: 0;
+    }
+    nav ul li {
+        border-bottom: 2px solid #330000;
+        display: block;
+        margin: 0;
+    }
+    nav a {
+        display: block;
+    }
+    .homehero {
+        background-image: none;
+        height: 0;
+    }
+    .yurthero {
+        background-image: none;
+        height: 0;
+    }
+    .trailhero {
+        background-image: none;
+        height: 0;
+    }
+    #mobile {
+        display: inline;
+    }
+    #desktop {
+        display: none;
+    }
 }
