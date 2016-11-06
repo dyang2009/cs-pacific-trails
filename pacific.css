@@ -40,7 +40,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    transition-timing-function: ease-out;
+    transition: color 3s ease-out;
 }
 
 nav ul {
@@ -240,6 +240,12 @@ tr:nth-of-type(odd) {
     background-color: #f5fafc;
 }
 
+#gallery {
+    color: blue;
+    height: 200px;
+    text-align: left;
+}
+
 @media only screen and (max-width: 37.5em) {
     #header {
         padding-top: 1em;
@@ -287,4 +293,9 @@ tr:nth-of-type(odd) {
     #desktop {
         display: none;
     }
+}
+
+.gallery {
+    display: none;
+    height: 0;
 }
