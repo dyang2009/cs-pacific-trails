@@ -152,7 +152,7 @@ label {
         display: block;
         margin-bottom: 20px;
     }
-    input [type="submit"] {
+    input type="submit" {
         margin-left: 130px;
     }
 }
